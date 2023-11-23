@@ -1,13 +1,23 @@
 server:
-  port: 8761
+  port: 8585
+
+
 spring:
- application:
-  name: config-prod
-  
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
+  datasource:
+    url: jdbc:mysql://localhost:3306/sample
+    username: root
+    password: Trigger@1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+
+
+  profile:
+    active: prod
+
 
