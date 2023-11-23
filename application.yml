@@ -1,7 +1,8 @@
 server:
   port: 8761
-
-
+spring:
+  application:
+    name: config-server
 eureka:
   client:
     registerWithEureka: false
