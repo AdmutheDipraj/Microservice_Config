@@ -1,1 +1,10 @@
-
+spring:
+ application:
+  name: config-dev
+  
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
